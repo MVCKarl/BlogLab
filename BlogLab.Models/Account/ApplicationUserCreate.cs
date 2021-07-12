@@ -15,5 +15,12 @@ namespace BlogLab.Models.Account
         [MaxLength(50, ErrorMessage = "Must be a max of 50 characters")]
         [EmailAddress(ErrorMessage = "Invalid email format")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "Username is required")]
+        [MinLength(5, ErrorMessage = "Must be 5-20 characters")]
+        [MaxLength(20, ErrorMessage = "Must be 5-20 characters")]
+        public string Username { get; set; }
+
+        public string Password { get; set; }
     }
 }

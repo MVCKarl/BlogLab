@@ -11,6 +11,11 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace BlogLab.Services
 {
+    public interface ITokenService
+    {
+        public string CreateToken(ApplicationUserIdentity user);
+    }
+
     public class TokenService : ITokenService
     {
         private readonly SymmetricSecurityKey _key;
